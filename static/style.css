@@ -768,10 +768,20 @@ img#demo-trigger:hover {
   transform: scale(1.05);
   border-color: #bf4408; /* цвет из твоей палитры */
 }
+/* Убираем ВСЕ виды обводки и теней при фокусе/клике */
 button,
 a,
-input,
-*:focus {
-  outline: none !important;
+img,
+*:focus,
+*:focus-visible,
+*:active {
+  outline: 0 !important;
+  outline-width: 0 !important;
+  outline-color: transparent !important;
+  outline-style: none !important;
   box-shadow: none !important;
+  border: none !important;
+}
+a:focus-visible {
+  outline: none !important;
 }
