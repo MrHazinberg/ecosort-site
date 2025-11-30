@@ -768,34 +768,10 @@ img#demo-trigger:hover {
   transform: scale(1.05);
   border-color: #bf4408; /* цвет из твоей палитры */
 }
-/* Общее правило: круглое выделение для всех кликабельных элементов */
-a img,
-button {
-  transition: outline 0.2s ease;
-  outline: 2px solid transparent;
-  border-radius: 50%; /* по умолчанию — круг */
-}
-
-/* Исключения: image3 и кнопка подписки — не круглые */
-a[href*="vk.com"] img,                /* иконка VK (image3) */
-button.group1-button {                /* кнопка "Подписаться" */
-  border-radius: 14px !important;     /* как у тебя в макете */
-  outline: 2px solid transparent;
-}
-
-/* При фокусе/наведении — показываем выделение */
-a:focus img,
-a:hover img,
-button:focus,
-button:hover {
-  outline: 2px solid #bf4408; /* цвет акцента из твоей палитры */
-}
-
-/* Убираем выделение для исключений при фокусе */
-a[href*="vk.com"]:focus img,
-a[href*="vk.com"]:hover img,
-button.group1-button:focus,
-button.group1-button:hover {
-  outline: 2px solid #bf4408;
-  border-radius: 14px !important;
+button,
+a,
+input,
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
